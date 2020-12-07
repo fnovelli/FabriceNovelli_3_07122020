@@ -1,0 +1,51 @@
+body {
+    width: auto;
+    margin: auto;
+    padding: 40px;
+}
+
+#logoBlock {
+    font-family: 'Shrikhand';
+}
+
+main {
+    font-family: 'Roboto';
+}
+
+#locationBlock {
+    margin-top: 10px;
+    background-color: #EAEAEA;
+    min-height: 40px;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#searchMap {
+    margin-right: 10px;
+}
+
+
+
+@media screen and (min-width: 1200px) { /*desktop and more*/
+
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1199px)  { /*Ipad*/
+
+  }
+
+  
+  @media screen and (max-width: 767px) { /*smartphone*/
+    body {
+        font-size: 17px;
+    }
+
+    header {
+        justify-content :center;
+        flex-wrap: wrap;
+        display :flex;
+    }
+
+  }
