@@ -1,11 +1,13 @@
 body {
     width: auto;
     margin: auto;
-    padding: 40px;
 }
 
 #logoBlock {
+    margin-top: 20px;
     font-family: 'Shrikhand';
+
+
 }
 
 main {
@@ -13,10 +15,12 @@ main {
 }
 
 #locationBlock {
+    
     margin-top: 10px;
     background-color: #EAEAEA;
     min-height: 40px;
-    min-width: 100%;
+    color: #353535;
+
     justify-content: center;
     align-items: center;
     display: flex;
@@ -26,11 +30,67 @@ main {
     margin-right: 10px;
 }
 
+#exploreResto {
+    background-color: #F6F6F6;
 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+}
+
+#subTitle, #subTitle2 {
+
+    text-align: center;
+}
+
+#subTitle2 {
+    font-size: 19px;
+    color: #4D4D4D;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.bResto {
+    background:radial-gradient(#FF79DA ,#9356DC);
+    border-radius: 20px;
+    color: white;
+}
+
+.bText {
+
+    align-items: center;
+    min-width: 200px;
+    min-height: 45px;
+    justify-content: center;
+    display: flex;
+}
+
+.titleBlock {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#footerBlock {
+    background-color: #4D4D4D;
+    min-height: 200px;
+    width: 100%;
+    display: flex;
+}
 
 @media screen and (min-width: 1200px) { /*desktop and more*/
+    body {
+        padding: 40px;
+    }
 
-  }
+    #locationBlock {
+        width: 50%;
+    }
+
+}
   
   @media screen and (min-width: 768px) and (max-width: 1199px)  { /*Ipad*/
 
@@ -38,7 +98,7 @@ main {
 
   
   @media screen and (max-width: 767px) { /*smartphone*/
-    body {
+    body  {
         font-size: 17px;
     }
 
@@ -46,6 +106,10 @@ main {
         justify-content :center;
         flex-wrap: wrap;
         display :flex;
+    }
+
+    #locationBlock {
+        width: 100%;
     }
 
   }
