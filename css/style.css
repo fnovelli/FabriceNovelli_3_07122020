@@ -6,8 +6,6 @@ body {
 #logoBlock {
     margin-top: 20px;
     font-family: 'Shrikhand';
-
-
 }
 
 main {
@@ -15,12 +13,10 @@ main {
 }
 
 #locationBlock {
-    
     margin-top: 10px;
     background-color: #EAEAEA;
     min-height: 40px;
     color: #353535;
-
     justify-content: center;
     align-items: center;
     display: flex;

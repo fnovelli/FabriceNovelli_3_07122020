@@ -1,0 +1,36 @@
+
+
+#locationBlock {
+    margin-top: 10px;
+    background-color: #EAEAEA;
+    min-height: 40px;
+    color: #353535;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    #searchMap {
+        margin-right: 10px;
+    }
+
+
+}
+
+#exploreResto {
+    background-color: #F6F6F6;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+
+    #subTitle, #subTitle2 {
+     text-align: center;
+    }
+
+        #subTitle2 {
+        font-size: 19px;
+        color: #4D4D4D;
+        }
+
+}
