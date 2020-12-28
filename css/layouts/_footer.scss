@@ -1,0 +1,21 @@
+#footerBlock {
+    background-color: $footerColor;
+    min-height: 200px;
+    width: 100%;
+
+}
+
+.footMenu {
+    padding: 15px;
+    color: white;
+    flex-direction: column;
+    display: flex;
+}
+
+.fLine {
+    margin-top: 5px;
+    color: white;
+    &--fLineIcon {
+
+    }
+}

@@ -1,3 +1,6 @@
+@import "./utils/variables";
+@import "./layouts/footer";
+
 body {
     width: auto;
     margin: auto;
@@ -24,15 +27,14 @@ main {
 
 #searchMap {
     margin-right: 10px;
-}
+}   
 
 #exploreResto {
-    background-color: #F6F6F6;
 
+    background-color: $bgColor;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
     display: flex;
 }
 
@@ -65,18 +67,53 @@ a:link {
     display: flex;
 }
 
+#fonctionBlock {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
 .titleBlock {
     font-weight: bold;
     margin-left: 10px;
 }
 
 
-#footerBlock {
-    background-color: #4D4D4D;
-    min-height: 200px;
-    width: 100%;
+.btn {
+    margin-top: 10px;
+    padding: 1.5rem;
+    background: $bgColor;
+    cursor: pointer;
+    width: 75%;
+    border-radius: 20px;
+
+    color: black;
+  
+          &--purple {
+             background-color: $btnSecond;
+            }
+}
+
+#restoBlock {
+    flex-wrap: wrap;
+    background-color: $bgColor;
+    flex-direction: column;
     display: flex;
 }
+
+.rCard {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 5px;
+    margin-left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+    width: 80%;
+    max-height: 100%;
+    color:black;
+  }
 
 @media screen and (min-width: 1200px) { /*desktop and more*/
     body {
