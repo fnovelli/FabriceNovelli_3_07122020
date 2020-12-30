@@ -35,6 +35,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     display: flex;
 }
 
@@ -116,12 +117,16 @@ a:link {
   }
 
 @media screen and (min-width: 1200px) { /*desktop and more*/
-    body {
-        padding: 40px;
+
+    #logoBlock {
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
     }
 
-    #locationBlock {
-        width: 50%;
+    body {
+        padding: 40px;
+        max-width: 60%;
     }
 
 }
@@ -132,8 +137,13 @@ a:link {
 
   
   @media screen and (max-width: 767px) { /*smartphone*/
+
     body  {
         font-size: 17px;
+    }
+
+    #logoBlock {
+        font-size: 30px;
     }
 
     header {
@@ -146,4 +156,4 @@ a:link {
         width: 100%;
     }
 
-  }
+}
