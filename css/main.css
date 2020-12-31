@@ -1,45 +1,43 @@
-#footerBlock {
-  background-color: #4D4D4D;
-  min-height: 200px;
-  width: 100%;
-}
-
-#footLogo {
-  padding: 15px;
-  font-family: 'Shrikhand';
+.btnExploResto {
+  background: radial-gradient(#FF79DA, #9356DC);
+  border-radius: 20px;
   color: white;
 }
 
-.footMenu {
-  padding: 15px;
-  margin-top: -15px;
-  color: white;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.btnText {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 200px;
+  min-height: 45px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.fLine {
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 0px 3px 3px #0000002e;
+          box-shadow: 0px 3px 3px #0000002e;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin-top: 10px;
-  color: white;
+  padding: 1.5rem;
+  background: #F6F6F6;
+  cursor: pointer;
+  width: 75%;
+  border-radius: 20px;
+  color: black;
 }
 
-body {
-  width: auto;
-  margin: auto;
-}
-
-#logoBlock {
-  margin-top: 20px;
-  font-family: 'Shrikhand';
-}
-
-main {
-  font-family: 'Roboto';
+.btn--purple {
+  background-color: #f5edff;
 }
 
 #locationBlock {
@@ -94,24 +92,48 @@ a:link {
   text-decoration: none;
 }
 
-.bResto {
-  background: radial-gradient(#FF79DA, #9356DC);
-  border-radius: 20px;
+#footerBlock {
+  background-color: #4D4D4D;
+  min-height: 200px;
+  width: 100%;
+}
+
+#footLogo {
+  padding: 15px;
+  font-family: 'Shrikhand';
   color: white;
 }
 
-.bText {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-width: 200px;
-  min-height: 45px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.footMenu {
+  padding: 15px;
+  margin-top: -15px;
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.fLine {
+  margin-top: 10px;
+  color: white;
+}
+
+body {
+  width: auto;
+  margin: auto;
+}
+
+#logoBlock {
+  margin-top: 20px;
+  font-family: 'Shrikhand';
+}
+
+main {
+  font-family: 'Roboto';
 }
 
 #fonctionBlock {
@@ -130,28 +152,6 @@ a:link {
 .titleBlock {
   font-weight: bold;
   margin-left: 10px;
-}
-
-.btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-shadow: 0px 3px 3px #0000002e;
-          box-shadow: 0px 3px 3px #0000002e;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-top: 10px;
-  padding: 1.5rem;
-  background: #F6F6F6;
-  cursor: pointer;
-  width: 75%;
-  border-radius: 20px;
-  color: black;
-}
-
-.btn--purple {
-  background-color: #f5edff;
 }
 
 #restoBlock {

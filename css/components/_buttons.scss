@@ -1,0 +1,32 @@
+.btnExploResto {
+    background:radial-gradient(#FF79DA ,#9356DC);
+    border-radius: 20px;
+    color: white;
+}
+
+.btnText {
+
+    align-items: center;
+    min-width: 200px;
+    min-height: 45px;
+    justify-content: center;
+    display: flex;
+}
+
+.btn {
+    display: flex;
+    box-shadow: 0px 3px 3px #0000002e;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    padding: 1.5rem;
+    background: $bgColor;
+    cursor: pointer;
+    width: 75%;
+    border-radius: 20px;
+
+    color: black;
+  
+          &--purple {
+             background-color: $btnSecond;
+            }
+}
