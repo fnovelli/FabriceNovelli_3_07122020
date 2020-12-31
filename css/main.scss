@@ -32,7 +32,6 @@ main {
 
 
 
-
 #restoBlock {
     flex-wrap: wrap;
     background-color: $bgColor;
@@ -87,6 +86,50 @@ main {
     display: flex;
     justify-content: start;
     font-size: 40px;
+}
+
+.menuBlock {
+    border-radius: 20px 20px 0 0;
+    background-color: $bgColor;
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.menuImg {
+
+ max-height: 250px;
+ object-fit: cover;
+
+}
+
+.menuTextCard {
+
+    margin-top: 15px;
+    display: flex;
+    background-color: white;
+    margin-left: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+    width: 80%;
+    max-height: 70px;
+    color:black;
+  }
+
+  .menuText {
+    flex-wrap: wrap;
+    padding: 10px;
+    min-height: 20px;
+    display: flex;
+    max-width: 100%;
+}
+
+.menuTextChild {
+
+    max-width: 100%;
+    font-size: 14px;
 }
 
 
