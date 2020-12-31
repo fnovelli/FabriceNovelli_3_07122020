@@ -214,6 +214,18 @@ a:link {
   font-size: 16px;
 }
 
+.logoMenuBlock {
+  font-family: 'Shrikhand';
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  font-size: 40px;
+}
+
 @media screen and (min-width: 1200px) {
   /*desktop and more*/
   #logoBlock {
