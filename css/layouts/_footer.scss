@@ -5,21 +5,21 @@
 }
 
 #footLogo {
+    padding: 15px;
     font-family: 'Shrikhand';
     color: white;
 }
 
 .footMenu {
     padding: 15px;
+    margin-top: -15px;
     color: white;
     flex-direction: column;
     display: flex;
 }
 
 .fLine {
-    margin-top: 5px;
+    margin-top: 10px;
     color: white;
-    &--fLineIcon {
 
-    }
 }
