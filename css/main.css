@@ -24,15 +24,17 @@
   display: flex;
 }
 
+.btnIcon {
+  color: #4D4D4D;
+  margin-right: 30px;
+}
+
 .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-shadow: 0px 3px 3px #0000002e;
           box-shadow: 0px 3px 3px #0000002e;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   margin-top: 10px;
   padding: 1.5rem;
   background: #F6F6F6;
@@ -116,8 +118,8 @@ a:link {
   color: white;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,6 +128,10 @@ a:link {
 .fLine {
   margin-top: 10px;
   color: white;
+}
+
+.footBlockLine {
+  margin-top: 10px;
 }
 
 body {
@@ -158,6 +164,8 @@ main {
 .titleBlock {
   font-weight: bold;
   margin-left: 10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 #restoBlock {
@@ -171,6 +179,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 1050px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,7 +193,6 @@ main {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: white;
-  margin-left: 20px;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 16px #0000002e;
           box-shadow: 0 0 16px #0000002e;
@@ -203,10 +211,20 @@ main {
      object-fit: cover;
 }
 
+.rText {
+  margin-top: -10px;
+  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .rTextChild {
-  min-height: 25px;
   margin-left: 10px;
-  margin-top: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +233,7 @@ main {
 
 .rsubText {
   margin-left: 10px;
-  margin-top: -15px;
+  margin-top: -20px;
   max-width: 100%;
   font-size: 16px;
 }
@@ -312,9 +330,6 @@ main {
   #fonctionBlock {
     min-height: 300px;
   }
-  #restoBlock {
-    min-height: 1000px;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -336,9 +351,6 @@ main {
   }
   #fonctionBlock {
     min-height: 300px;
-  }
-  #restoBlock {
-    min-height: 1000px;
   }
 }
 
@@ -368,9 +380,6 @@ main {
   }
   #fonctionBlock {
     min-height: 300px;
-  }
-  #restoBlock {
-    min-height: 1000px;
   }
 }
 /*# sourceMappingURL=main.css.map */
