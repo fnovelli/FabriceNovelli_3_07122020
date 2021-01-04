@@ -92,10 +92,20 @@ main {
 .logoMenuBlock {
     font-family: 'Shrikhand';
     width: 100%;
+
+    justify-content: center;
     display: flex;
-    justify-content: start;
+
     font-size: 40px;
 }
+
+.logoText {
+
+    justify-content: center;
+    display: flex;
+}
+
+
 
 .menuBlock {
     border-radius: 20px 20px 0 0;
