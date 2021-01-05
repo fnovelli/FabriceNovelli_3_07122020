@@ -322,9 +322,10 @@ main {
 }
 
 .menuBlock {
-  border-radius: 20px 20px 0 0;
+  border-radius: 40px 40px 0 0;
   background-color: #F6F6F6;
   min-height: 300px;
+  margin-top: -30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -341,9 +342,9 @@ main {
 }
 
 .menuImg {
-  max-height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 200px;
+  background-image: url("../images/restaurants/1.jpg");
+  background-size: cover;
 }
 
 .menuTextCard {
@@ -375,6 +376,14 @@ main {
 .menuTextChild {
   max-width: 100%;
   font-size: 14px;
+}
+
+.menutitleText {
+  margin-top: -45px;
+  font-weight: bold;
+  margin-left: 10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 @media screen and (min-width: 1200px) {
