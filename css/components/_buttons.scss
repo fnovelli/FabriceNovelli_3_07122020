@@ -18,7 +18,8 @@
 
 .btnIcon {
     color: $footerColor;
-    margin-right: 30px;
+    margin-left: 20px;
+    width: 35px;
 }
 
 .btnHome {
@@ -32,9 +33,22 @@
     display: flex;
 }
 
+.btnHome:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.groupBtnIcons {
+
+    align-items: center;
+
+    display: flex;
+}
+
 .btn {
     display: flex;
     box-shadow: 0px 3px 3px #0000002e;
+    align-items: center;
 
     margin-top: 10px;
     padding: 1.5rem;
