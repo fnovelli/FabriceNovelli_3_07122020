@@ -1,17 +1,31 @@
 .btnResto {
     max-width: 195px;
     margin-top: 20px;
-    background:radial-gradient(#FF79DA ,#9356DC);
+    background: radial-gradient($btnThird, $likeColor);
     border-radius: 20px;
     max-height: 50px;
     color: white;
-    display: flex;
-
-    transition: transform 300ms ease-in-out;
-    transition-delay: 50ms;
+    position: relative;
+    z-index: 1;
     &:hover {
-        transform: scale(1.10);
+        &::after {
+            opacity: 1;
+        }
     }
+
+    &::after {
+          content: "";
+          border-radius: 20px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: radial-gradient(circle, lighten($btnThird, 5) 0%, lighten($likeColor, 10) 100%);
+          opacity: 0;
+          z-index: -1;
+          transition: opacity 250ms;
+      }
 }
 
 .btnText {

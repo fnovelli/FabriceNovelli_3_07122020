@@ -1,24 +1,31 @@
 .btnResto {
   max-width: 195px;
   margin-top: 20px;
-  background: radial-gradient(#FF79DA, #9356DC);
+  background: radial-gradient(#FF79DA, #9356dc);
   border-radius: 20px;
   max-height: 50px;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-  -webkit-transition-delay: 50ms;
-          transition-delay: 50ms;
+  position: relative;
+  z-index: 1;
 }
 
-.btnResto:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.btnResto:hover::after {
+  opacity: 1;
+}
+
+.btnResto::after {
+  content: "";
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle, #ff93e1 0%, #ae80e5 100%);
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
 }
 
 .btnText {
@@ -180,6 +187,106 @@ a:link {
   margin-top: 10px;
 }
 
+.lds-ring {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 1000px;
+  height: 150px;
+}
+
+.lds-ring div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  margin: 8px;
+  border: 8px solid #000;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+  visibility: hidden;
+  border-color: #000 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.10s;
+          animation-delay: -0.10s;
+}
+
+.lds-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes bodyHide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(9999px);
+            transform: translateY(9999px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bodyHide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(9999px);
+            transform: translateY(9999px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 body {
   width: auto;
   margin: auto;
@@ -193,6 +300,14 @@ body {
 
 main {
   font-family: 'Roboto';
+  -webkit-animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 2800ms;
+          animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 2800ms;
+  overflow: hidden;
+}
+
+header {
+  -webkit-animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 2800ms;
+          animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 2800ms;
 }
 
 #fonctionBlock {
@@ -348,9 +463,27 @@ main {
   display: flex;
 }
 
-.menuImg {
+.menuImg1 {
   height: 230px;
   background-image: url("../images/restaurants/1.jpg");
+  background-size: cover;
+}
+
+.menuImg2 {
+  height: 230px;
+  background-image: url("../images/restaurants/2.jpg");
+  background-size: cover;
+}
+
+.menuImg3 {
+  height: 230px;
+  background-image: url("../images/restaurants/3.jpg");
+  background-size: cover;
+}
+
+.menuImg4 {
+  height: 230px;
+  background-image: url("../images/restaurants/4.jpg");
   background-size: cover;
 }
 

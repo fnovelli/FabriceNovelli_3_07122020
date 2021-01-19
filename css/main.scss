@@ -3,6 +3,71 @@
 @import "./layouts/header";
 @import "./layouts/footer";
 
+//Loader
+.lds-ring {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    position: absolute;
+    width: 1000px;
+    height: 150px;
+
+  }
+
+  .lds-ring div {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: auto;
+
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin: 8px;
+    border: 8px solid #000;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) $loader-dur;
+    visibility: hidden;
+    border-color: #000 transparent transparent transparent;
+  }
+
+  .lds-ring div:nth-child(1) {
+
+    animation-delay: -0.10s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+
+    animation-delay: -0.15s;
+  }
+
+  @keyframes lds-ring {
+    0% {
+   
+      transform: rotate(0deg);
+    }
+
+    100% {
+        visibility: visible;
+        transform: rotate(360deg);
+    }
+  }
+
+  @keyframes bodyHide {
+    0% {
+        opacity: 0;
+        transform: translateY(9999px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+
 body {
     width: auto;
     margin: auto;
@@ -16,8 +81,14 @@ body {
 
 main {
     font-family: 'Roboto';
+    animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) $main-delay;
+    overflow: hidden;
+
 }
 
+header {
+    animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) $main-delay;
+}
 
 
 #fonctionBlock {
@@ -64,7 +135,7 @@ display: flex;
 
     max-height: 100%;
     color:black;
-  }
+}
 
   .rImg {
     border-radius: 20px 20px 0px 0px;
@@ -131,13 +202,34 @@ display: flex;
     display: flex;
 }
 
-.menuImg {
+.menuImg1 {
 
     height: 230px;
     background-image: url('../images/restaurants/1.jpg');
     background-size: cover;
-
 }
+
+.menuImg2 {
+
+    height: 230px;
+    background-image: url('../images/restaurants/2.jpg');
+    background-size: cover;
+}
+
+.menuImg3 {
+
+    height: 230px;
+    background-image: url('../images/restaurants/3.jpg');
+    background-size: cover;
+}
+
+.menuImg4 {
+
+    height: 230px;
+    background-image: url('../images/restaurants/4.jpg');
+    background-size: cover;
+}
+
 
 .menuTextCard {
     margin-top: 15px;
