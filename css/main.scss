@@ -4,6 +4,14 @@
 @import "./layouts/footer";
 
 //Loader
+
+.loaderBox {
+    display: flex;
+    width: auto;
+    justify-content: center;
+
+}
+
 .lds-ring {
     display: flex;
     width: auto;
@@ -32,20 +40,17 @@
   }
 
   .lds-ring div:nth-child(1) {
-
     animation-delay: -0.10s;
   }
   .lds-ring div:nth-child(2) {
     animation-delay: -0.3s;
   }
   .lds-ring div:nth-child(3) {
-
     animation-delay: -0.15s;
   }
 
   @keyframes lds-ring {
-    0% {
-   
+    0% { 
       transform: rotate(0deg);
     }
 
@@ -57,13 +62,12 @@
 
   @keyframes bodyHide {
     0% {
-        opacity: 0;
-        transform: translateY(9999px);
+        transform: translateY(15px);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0);
+ 
     }
   }
 
@@ -77,17 +81,21 @@ body {
 #logoBlock {
     margin-top: 20px;
     font-family: 'Shrikhand';
+    display: flex;
+    justify-content: center;
 }
 
 main {
     font-family: 'Roboto';
-    animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) $main-delay;
-    overflow: hidden;
-
 }
 
-header {
+.loaderMain {
     animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) $main-delay;
+    animation-fill-mode: forwards;
+    animation-delay: 1600ms;
+    opacity: 0;
+    overflow: hidden;
+    width: auto;
 }
 
 
@@ -190,11 +198,40 @@ display: flex;
     margin-top: 13px;
 }
 
+
+@keyframes menuHide {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+  }
+
+  .menuLoader {
+
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 65px;
+
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    animation: menuHide cubic-bezier(0.5, 0, 0.5, 1) 1600ms;
+  }
+
 .menuBlock {
     border-radius: 40px 40px 0 0;
     background-color: $bgColor;
     min-height: 1150px;
     margin-top: -30px;
+    
     justify-content: center;
     align-items: center;
 
@@ -289,8 +326,6 @@ display: flex;
 @media screen and (min-width: 1200px) { /*desktop and more*/
 
     #logoBlock {
-        display: flex;
-        justify-content: center;
         font-size: 40px;
     }
 
