@@ -86,3 +86,24 @@
              background-color: $btnSecond;
             }
 }
+
+.progress {
+    &__bar {
+        transform: scaleY(0);
+    }
+}
+
+.likeIcon {
+    max-height: 20px;
+    font-size: 22px;
+    margin-right: 15px;
+    margin-top: 13px;
+
+    &:hover {
+        background-color: red;
+        transform: scaleY(1.5);
+        transform: scaleX(1.5);
+    }
+}
+
+

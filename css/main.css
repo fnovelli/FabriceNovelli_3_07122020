@@ -100,6 +100,26 @@
   background-color: #f5edff;
 }
 
+.progress__bar {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.likeIcon {
+  max-height: 20px;
+  font-size: 22px;
+  margin-right: 15px;
+  margin-top: 13px;
+}
+
+.likeIcon:hover {
+  background-color: red;
+  -webkit-transform: scaleY(1.5);
+          transform: scaleY(1.5);
+  -webkit-transform: scaleX(1.5);
+          transform: scaleX(1.5);
+}
+
 #locationBlock {
   margin-top: 10px;
   background-color: #EAEAEA;
@@ -145,7 +165,6 @@
 }
 
 #subTitle2 {
-  font-size: 19px;
   color: #4D4D4D;
 }
 
@@ -208,6 +227,10 @@ a:link {
   position: absolute;
   width: 1000px;
   height: 150px;
+  -webkit-animation: loaderHide cubic-bezier(0.5, 0, 0.5, 1) 1900ms;
+          animation: loaderHide cubic-bezier(0.5, 0, 0.5, 1) 1900ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .lds-ring div {
@@ -226,8 +249,8 @@ a:link {
   margin: 8px;
   border: 8px solid #000;
   border-radius: 50%;
-  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) 600ms;
-          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) 600ms;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) 500ms;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) 500ms;
   visibility: hidden;
   border-color: #000 transparent transparent transparent;
 }
@@ -291,6 +314,28 @@ a:link {
   }
 }
 
+@-webkit-keyframes loaderHide {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+}
+
+@keyframes loaderHide {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+}
+
 body {
   width: auto;
   margin: auto;
@@ -313,8 +358,8 @@ main {
 }
 
 .loaderMain {
-  -webkit-animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 2000ms;
-          animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 2000ms;
+  -webkit-animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 1900ms;
+          animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 1900ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 1600ms;
@@ -350,7 +395,6 @@ main {
   height: 25px;
   width: 25px;
   margin: -3px;
-  margin-left: -40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -449,12 +493,6 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.likeIcon {
-  font-size: 22px;
-  margin-right: 15px;
-  margin-top: 13px;
 }
 
 @-webkit-keyframes menuHide {
@@ -614,11 +652,22 @@ main {
 @media screen and (min-width: 1200px) {
   /*desktop and more*/
   #logoBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 40px;
   }
+  #subTitle2 {
+    font-size: 19px;
+  }
   body {
-    padding: 40px;
-    max-width: 60%;
+    max-width: 70%;
+  }
+  .numberIcon {
+    margin-left: -40px;
   }
   #locationText {
     font-size: 20px;
@@ -645,7 +694,7 @@ main {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 487px) and (max-width: 1199px) {
   /*Ipad*/
   #logoBlock {
     display: -webkit-box;
@@ -656,8 +705,14 @@ main {
             justify-content: center;
     font-size: 40px;
   }
+  #subTitle2 {
+    font-size: 18px;
+  }
   .rCard {
     width: 80%;
+  }
+  .numberIcon {
+    margin-left: -35px;
   }
   #exploreResto {
     min-height: 300px;
@@ -677,10 +732,13 @@ main {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 486px) {
   /*smartphone*/
   #logoBlock {
     font-size: 30px;
+  }
+  #subTitle2 {
+    font-size: 19px;
   }
   header {
     -webkit-box-pack: center;
@@ -701,6 +759,9 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
     min-height: 1050px;
+  }
+  .numberIcon {
+    margin-left: -35px;
   }
   .rCard {
     width: 80%;
