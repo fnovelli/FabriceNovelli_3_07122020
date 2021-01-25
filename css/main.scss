@@ -219,8 +219,6 @@ main {
   }
 
   .menuLoader {
-
-
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -312,10 +310,9 @@ main {
     align-self: flex-end;
 }
 
-
 .menutitleText {
     font-family: 'Shrikhand';
-    margin-top: -40px;  
+    margin-top: -40px;
     margin-left: 30px;
     max-height: 20px;
     align-self: flex-start; 
@@ -369,6 +366,10 @@ main {
         width: 45%;
     }
     
+    .likeIconMenu {
+        margin-right: 100px;
+    }
+
     #exploreResto {
         min-height: 300px;
     }
@@ -395,6 +396,10 @@ main {
 
     .rCard {
         width: 80%;
+    }
+
+    .likeIconMenu {
+        margin-right: 70px;
     }
 
     
@@ -455,6 +460,10 @@ main {
     
     .rCard {
         width: 80%;
+    }
+
+    .likeIconMenu {
+        margin-right: 30px;
     }
     
     #locationBlock {

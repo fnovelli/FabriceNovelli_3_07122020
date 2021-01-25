@@ -94,16 +94,54 @@
 }
 
 .likeIcon {
-    max-height: 20px;
-    font-size: 22px;
+    min-width: 35px;
+    max-height: 35px;
     margin-right: 15px;
     margin-top: 13px;
+    background-image: url('../images/icons/heart.svg');
 
     &:hover {
-        background-color: red;
-        transform: scaleY(1.5);
-        transform: scaleX(1.5);
+        background-image: url('../images/icons/heart-fil.svg');
+        animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 250ms;
+        animation-fill-mode: forwards;
+
+        color: red;
+        fill: red;
     }
 }
 
+.likeIconMenu {
+    align-self: flex-end;
+    margin-top: -40px;
+    max-height: 20px;
+    display: flex;
+
+    min-width: 35px;
+    min-height: 35px;
+    background-image: url('../images/icons/heart.svg');
+    
+
+    &:hover {
+        background-image: url('../images/icons/heart-fil.svg');
+        animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 250ms;
+        animation-fill-mode: forwards;
+
+        color: red;
+        fill: red;
+    }
+}
+
+@keyframes likeAnim {
+    0% { 
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.50;
+    }
+
+    100% {
+        opacity: 1;
+    }
+  }
 
