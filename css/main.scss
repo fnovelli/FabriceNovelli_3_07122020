@@ -104,7 +104,7 @@ main {
 }
 
 .loaderMain {
-    animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) $main-delay;
+    animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
     animation-fill-mode: forwards;
     animation-delay: 1600ms;
     opacity: 0;
@@ -150,13 +150,67 @@ main {
     display: flex;
     flex-wrap: wrap;
     background-color: white;
-
     border-radius: 20px;
     box-shadow: 0 0 16px #0000002e;
-
     max-height: 100%;
     color:black;
 }
+
+
+
+.menuTextCard > .checkMarkBG {
+    transform-origin: left;
+
+}
+  
+.menuTextCard:hover > .checkMarkBG {
+    
+    animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+    animation-fill-mode: forwards;
+
+  }
+
+  .menuTextCard:hover > .price {
+    animation-delay: 2s;
+    animation: animMoving cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes checkMarkHide {
+        0% {
+            visibility: visible;
+        }
+
+        25% {
+            transform: rotate(360deg);
+        }
+    
+        100% {
+            transform: translateX(-100px);
+        }
+      }
+
+      
+    @keyframes checkMarkBGAnim {
+        0% {
+            visibility: visible;
+        }
+    
+        100% {
+            transform: translateX(-50px);
+        }
+      }
+
+      @keyframes animMoving {
+        0% {
+            visibility: visible;
+        }
+
+        100% {
+            transform: translateX(-100px);
+        }
+      }
+    
 
   .rImg {
     border-radius: 20px 20px 0px 0px;
@@ -204,6 +258,7 @@ main {
     justify-content: center;
     display: flex;
 }
+
 
 
 
@@ -274,9 +329,9 @@ main {
 }
 
 
+
 .menuTextCard {
-    margin-top: 15px;
-    
+    margin-top: 15px; 
     display: flex;
     background-color: white;
     flex-direction: column;
@@ -284,9 +339,10 @@ main {
     flex-wrap: wrap;
     box-shadow: 0 0 16px #0000002e;
     width: 88%;
-    min-height: 65px;
+    height: 65px;
     color:black;
-  }
+}
+
 
   .menuText {
     margin-top: 10px;
@@ -305,10 +361,21 @@ main {
     margin-top: -15px;
     margin-right: 15px;
     font-size: 15px;
-    color: #353535;
     font-weight: bold;
     align-self: flex-end;
 }
+
+.checkMarkBG {
+    align-self: flex-end;
+    visibility: hidden;
+    margin-right: -50px;
+    width: 7%;
+    height: 62px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: $checkColor;
+}
+
+
 
 .menutitleText {
     font-family: 'Shrikhand';

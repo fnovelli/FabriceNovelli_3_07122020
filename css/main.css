@@ -408,8 +408,8 @@ main {
 }
 
 .loaderMain {
-  -webkit-animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 1900ms;
-          animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 1900ms;
+  -webkit-animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+          animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) 800ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 1600ms;
@@ -485,6 +485,95 @@ main {
           box-shadow: 0 0 16px #0000002e;
   max-height: 100%;
   color: black;
+}
+
+.menuTextCard > .checkMarkBG {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.menuTextCard:hover > .checkMarkBG {
+  -webkit-animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+          animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menuTextCard:hover > .price {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation: animMoving cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+          animation: animMoving cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes checkMarkHide {
+  0% {
+    visibility: visible;
+  }
+  25% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+@keyframes checkMarkHide {
+  0% {
+    visibility: visible;
+  }
+  25% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+@-webkit-keyframes checkMarkBGAnim {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+}
+
+@keyframes checkMarkBGAnim {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+  }
+}
+
+@-webkit-keyframes animMoving {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+@keyframes animMoving {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
 }
 
 .rImg {
@@ -649,7 +738,7 @@ main {
   -webkit-box-shadow: 0 0 16px #0000002e;
           box-shadow: 0 0 16px #0000002e;
   width: 88%;
-  min-height: 65px;
+  height: 65px;
   color: black;
 }
 
@@ -675,10 +764,20 @@ main {
   margin-top: -15px;
   margin-right: 15px;
   font-size: 15px;
-  color: #353535;
   font-weight: bold;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.checkMarkBG {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  visibility: hidden;
+  margin-right: -50px;
+  width: 7%;
+  height: 62px;
+  border-radius: 0px 20px 20px 0px;
+  background-color: #8edec9;
 }
 
 .menutitleText {
