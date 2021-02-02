@@ -99,6 +99,7 @@
     margin-right: 15px;
     margin-top: 13px;
     background-image: url('../images/icons/heart.svg');
+    cursor: pointer; 
 
     &:hover {
         background-image: url('../images/icons/heart-fil.svg');
@@ -119,6 +120,7 @@
     min-width: 35px;
     min-height: 35px;
     background-image: url('../images/icons/heart.svg');
+    cursor: pointer; 
     
 
     &:hover {

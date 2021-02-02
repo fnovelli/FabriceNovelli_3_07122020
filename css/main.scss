@@ -144,6 +144,28 @@ main {
     display: flex;
 }
 
+
+@keyframes cardScale {
+    0% {
+        visibility: visible;
+    }
+
+    25% {
+        transform: scale(1.01);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+
+
+
+    100% {
+        transform: scale(1.03);
+    }
+  }
+
+
 .rCard {
     margin-top: 15px;
     justify-content: space-between;
@@ -154,8 +176,13 @@ main {
     box-shadow: 0 0 16px #0000002e;
     max-height: 100%;
     color:black;
+
 }
 
+.rCard:hover {
+    animation: cardScale cubic-bezier(0.5, 0, 0.5, 1) 80ms;
+    animation-fill-mode: both;
+}
 
 
 .menuTextCard > .checkMarkBG {
@@ -197,7 +224,7 @@ main {
         }
     
         100% {
-            transform: translateX(-50px);
+            weight: 50px;
         }
       }
 
@@ -341,6 +368,7 @@ main {
     width: 88%;
     height: 65px;
     color:black;
+    cursor: pointer; 
 }
 
 
@@ -370,7 +398,6 @@ main {
     visibility: hidden;
     margin-right: -50px;
     width: 7%;
-    height: 62px;
     border-radius: 0px 20px 20px 0px;
     background-color: $checkColor;
 }
