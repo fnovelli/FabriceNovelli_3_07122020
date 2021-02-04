@@ -1,3 +1,221 @@
+@-webkit-keyframes loaderHide {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+}
+
+@keyframes loaderHide {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes bodyHide {
+  0% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bodyHide {
+  0% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cardScale {
+  0% {
+    visibility: visible;
+  }
+  25% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+}
+
+@keyframes cardScale {
+  0% {
+    visibility: visible;
+  }
+  25% {
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  50% {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  100% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+}
+
+@-webkit-keyframes likeAnim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.50;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes likeAnim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.50;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes checkMarkBGAnim {
+  0% {
+    visibility: visible;
+    width: 0px;
+  }
+  100% {
+    width: calc(5%);
+    visibility: visible;
+  }
+}
+
+@keyframes checkMarkBGAnim {
+  0% {
+    visibility: visible;
+    width: 0px;
+  }
+  100% {
+    width: calc(5%);
+    visibility: visible;
+  }
+}
+
+@-webkit-keyframes menuHide {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes menuHide {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes checkMarkHide {
+  0% {
+    visibility: visible;
+  }
+  25% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+@keyframes checkMarkHide {
+  0% {
+    visibility: visible;
+  }
+  25% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+}
+
+@-webkit-keyframes animMoving {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes animMoving {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+}
+
 .btnResto {
   max-width: 195px;
   margin-top: 20px;
@@ -150,116 +368,6 @@
   fill: red;
 }
 
-@-webkit-keyframes likeAnim {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.50;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes likeAnim {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.50;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-#locationBlock {
-  margin-top: 10px;
-  background-color: #EAEAEA;
-  min-height: 40px;
-  color: #353535;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#searchMap {
-  margin-right: 10px;
-}
-
-#exploreResto {
-  background-color: #F6F6F6;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#subTitle, #subTitle2 {
-  margin-top: -15px;
-  text-align: center;
-}
-
-#subTitle2 {
-  color: #4D4D4D;
-}
-
-a:link {
-  text-decoration: none;
-}
-
-#footerBlock {
-  background-color: #4D4D4D;
-  min-height: 200px;
-  width: 100%;
-}
-
-#footLogo {
-  padding: 15px;
-  font-family: 'Shrikhand';
-  color: white;
-}
-
-.footMenu {
-  padding: 15px;
-  margin-top: -15px;
-  color: white;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.fLine {
-  margin-top: 10px;
-  color: white;
-}
-
-.footBlockLine {
-  margin-top: 10px;
-}
-
 .loaderBox {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -322,72 +430,6 @@ a:link {
 .lds-ring div:nth-child(3) {
   -webkit-animation-delay: -0.15s;
           animation-delay: -0.15s;
-}
-
-@-webkit-keyframes lds-ring {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    visibility: visible;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes lds-ring {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    visibility: visible;
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes bodyHide {
-  0% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes bodyHide {
-  0% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes loaderHide {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
-  }
-}
-
-@keyframes loaderHide {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    width: 0px;
-    height: 0px;
-    visibility: hidden;
-  }
 }
 
 body {
@@ -473,42 +515,6 @@ main {
   display: flex;
 }
 
-@-webkit-keyframes cardScale {
-  0% {
-    visibility: visible;
-  }
-  25% {
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
-  }
-  50% {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-  }
-  100% {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
-  }
-}
-
-@keyframes cardScale {
-  0% {
-    visibility: visible;
-  }
-  25% {
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
-  }
-  50% {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-  }
-  100% {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
-  }
-}
-
 .rCard {
   margin-top: 15px;
   -webkit-box-pack: justify;
@@ -534,12 +540,23 @@ main {
           animation-fill-mode: both;
 }
 
-.menuTextCard > .checkMarkBG {
-  -webkit-transform-origin: left;
-          transform-origin: left;
+.checkMarkBG {
+  background-color: #8edec9;
+  border-radius: 0px 20px 20px 0px;
+  margin-right: -5px;
+  width: 7%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  visibility: hidden;
 }
 
 .menuTextCard:hover > .checkMarkBG {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   -webkit-animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
           animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
   -webkit-animation-fill-mode: forwards;
@@ -555,70 +572,45 @@ main {
           animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes checkMarkHide {
-  0% {
-    visibility: visible;
-  }
-  25% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  100% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
+.menuTextCard:hover > .checkMarkIcon {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation: checkMarkHide cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+          animation: checkMarkHide cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-@keyframes checkMarkHide {
-  0% {
-    visibility: visible;
-  }
-  25% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-  100% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
+.checkMarkIcon {
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-@-webkit-keyframes checkMarkBGAnim {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    weight: 50px;
-  }
-}
-
-@keyframes checkMarkBGAnim {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    weight: 50px;
-  }
-}
-
-@-webkit-keyframes animMoving {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
-}
-
-@keyframes animMoving {
-  0% {
-    visibility: visible;
-  }
-  100% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-  }
+.checkMarkRegroup {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100px;
 }
 
 .rImg {
@@ -679,35 +671,16 @@ main {
   display: flex;
 }
 
-@-webkit-keyframes menuHide {
-  0% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes menuHide {
-  0% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .menuLoader {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -717,8 +690,6 @@ main {
   width: 100%;
   min-height: 65px;
   overflow: hidden;
-  flex-direction: column;
-  display: flex;
   -webkit-animation: menuHide cubic-bezier(0.5, 0, 0.5, 1) 1600ms;
           animation: menuHide cubic-bezier(0.5, 0, 0.5, 1) 1600ms;
 }
@@ -726,7 +697,6 @@ main {
 .menuBlock {
   border-radius: 40px 40px 0 0;
   background-color: #F6F6F6;
-  min-height: 1150px;
   margin-top: -30px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -738,6 +708,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 1150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -773,19 +744,19 @@ main {
   display: -ms-flexbox;
   display: flex;
   background-color: white;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   border-radius: 20px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-shadow: 0 0 16px #0000002e;
           box-shadow: 0 0 16px #0000002e;
-  width: 88%;
   height: 65px;
+  width: 88%;
   color: black;
   cursor: pointer;
+}
+
+.menuTextRegroup {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .menuText {
@@ -813,16 +784,6 @@ main {
   font-weight: bold;
   -ms-flex-item-align: end;
       align-self: flex-end;
-}
-
-.checkMarkBG {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  visibility: hidden;
-  margin-right: -50px;
-  width: 7%;
-  border-radius: 0px 20px 20px 0px;
-  background-color: #8edec9;
 }
 
 .menutitleText {
@@ -975,5 +936,91 @@ main {
   #fonctionBlock {
     min-height: 300px;
   }
+}
+
+#locationBlock {
+  margin-top: 10px;
+  background-color: #EAEAEA;
+  min-height: 40px;
+  color: #353535;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#searchMap {
+  margin-right: 10px;
+}
+
+#exploreResto {
+  background-color: #F6F6F6;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#subTitle, #subTitle2 {
+  margin-top: -15px;
+  text-align: center;
+}
+
+#subTitle2 {
+  color: #4D4D4D;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+#footerBlock {
+  background-color: #4D4D4D;
+  min-height: 200px;
+  width: 100%;
+}
+
+#footLogo {
+  padding: 15px;
+  font-family: 'Shrikhand';
+  color: white;
+}
+
+.footMenu {
+  padding: 15px;
+  margin-top: -15px;
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fLine {
+  margin-top: 10px;
+  color: white;
+}
+
+.footBlockLine {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=main.css.map */

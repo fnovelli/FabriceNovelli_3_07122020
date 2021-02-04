@@ -1,0 +1,483 @@
+//Loader
+
+.loaderBox {
+    display: flex;
+    width: auto;
+    justify-content: center;
+}
+
+.lds-ring {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    position: absolute;
+    width: 1000px;
+    height: 150px;
+    animation: loaderHide cubic-bezier(0.5, 0, 0.5, 1) $main-delay;
+    animation-fill-mode: forwards;
+  }
+
+  .lds-ring div {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    width: auto;
+
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    margin: 8px;
+    border: 8px solid #000;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) $loader-dur;
+    visibility: hidden;
+    border-color: #000 transparent transparent transparent;
+  }
+
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.10s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+
+
+
+
+body {
+    width: auto;
+    margin: auto;
+    font-size: 17px;
+}
+
+#logoBlock {
+    margin-top: 20px;
+    font-family: 'Shrikhand';
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    font-family: 'Roboto';
+}
+
+.loaderMain {
+    animation: bodyHide cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+    animation-fill-mode: forwards;
+    animation-delay: 1600ms;
+    opacity: 0;
+    overflow: hidden;
+    width: auto;
+}
+
+
+#fonctionBlock {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.numberIcon {
+    color: white;
+    background-color: $likeColor;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    margin: -3px;
+    display: flex;
+}
+
+.titleBlock {
+    font-weight: bold;
+    margin-left: 10px;
+    align-self: flex-start;
+}
+
+#restoBlock {
+    flex-wrap: wrap;
+    background-color: $bgColor;
+    align-items: center;
+    display: flex;
+}
+
+
+
+
+.rCard {
+    margin-top: 15px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 16px #0000002e;
+    max-height: 100%;
+    color:black;
+
+}
+
+.rCard:hover {
+    animation: cardScale cubic-bezier(0.5, 0, 0.5, 1) 80ms;
+    animation-fill-mode: both;
+}
+
+.checkMarkBG {
+    background-color: $checkColor;
+    border-radius: 0px 20px 20px 0px;
+    margin-right: -5px;
+    width: 7%;
+    height: 100%;
+    display: flex;
+    align-self: flex-end;
+    visibility: hidden;
+}
+ 
+.menuTextCard:hover > .checkMarkBG {
+    animation-delay: 2s;
+    animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+    animation-fill-mode: forwards;
+}
+
+  .menuTextCard:hover > .price {
+    animation-delay: 2s;
+    animation: animMoving cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+    animation-fill-mode: forwards;
+}
+
+
+  .menuTextCard:hover > .checkMarkIcon {
+    animation-delay: 2s;
+    animation: checkMarkHide cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+    animation-fill-mode: forwards;
+}
+
+.checkMarkIcon {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+
+.checkMarkRegroup {
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 100px;
+}
+
+
+
+  .rImg {
+    border-radius: 20px 20px 0px 0px;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .rText {
+      margin-top: -10px;
+    min-height: 80px;
+      display: flex;
+      flex-direction: column;
+
+  }
+
+  .rTextChild {
+    margin-left: 10px;
+    display: flex;
+    max-width: 100%;
+}
+
+.rsubText {
+
+    margin-left: 10px;
+    margin-top: -20px;
+    max-width: 100%;
+    font-size: 16px;
+}
+
+.logoMenuBlock {
+    font-family: 'Shrikhand';
+    width: 100%;
+
+    justify-content: center;
+    display: flex;
+
+    font-size: 40px;
+}
+
+.logoText {
+
+    justify-content: center;
+    display: flex;
+}
+
+  .menuLoader {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 65px;
+    overflow: hidden;
+    animation: menuHide cubic-bezier(0.5, 0, 0.5, 1) 1600ms;
+  }
+
+.menuBlock {
+    border-radius: 40px 40px 0 0;
+    background-color: $bgColor;
+    margin-top: -30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 1150px;
+    display: flex;
+}
+
+.menuImg1 {
+
+    height: 230px;
+    background-image: url('../images/restaurants/1.jpg');
+    background-size: cover;
+}
+
+.menuImg2 {
+
+    height: 230px;
+    background-image: url('../images/restaurants/2.jpg');
+    background-size: cover;
+}
+
+.menuImg3 {
+
+    height: 230px;
+    background-image: url('../images/restaurants/3.jpg');
+    background-size: cover;
+}
+
+.menuImg4 {
+
+    height: 230px;
+    background-image: url('../images/restaurants/4.jpg');
+    background-size: cover;
+}
+
+
+.menuTextCard {
+    margin-top: 15px; 
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+
+    box-shadow: 0 0 16px #0000002e;
+    height: 65px;
+    width: 88%;
+    color:black;
+    cursor: pointer; 
+}
+
+.menuTextRegroup {
+    flex: 1;
+
+}
+  .menuText {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuTextChild {
+    margin-top: -15px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.price {
+    margin-top: -15px;
+    margin-right: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+
+.menutitleText {
+    font-family: 'Shrikhand';
+    margin-top: -40px;
+    margin-left: 30px;
+    max-height: 20px;
+    align-self: flex-start; 
+}
+
+.menuSubTitle {
+    margin-left: 30px;
+    align-self: flex-start;
+    margin-top: 30px;
+    border-bottom: solid;
+    border-color: $animationColor;
+}
+
+
+
+@media screen and (min-width: 1200px) { /*desktop and more*/
+
+    #logoBlock {
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+    }
+
+    #subTitle2 {
+        font-size: 19px;
+    }
+
+    body {
+        max-width: 70%;
+    }
+
+    .numberIcon {
+        margin-left: -40px;
+    }
+
+    #locationText {
+        font-size: 20px;
+    }
+
+    .titleBlock {
+        width: 95%;
+    }
+
+    #restoBlock {
+
+        justify-content: space-around;
+        min-height: 620px;
+    }
+
+    .rCard {
+        width: 45%;
+    }
+    
+    .likeIconMenu {
+        margin-right: 100px;
+    }
+
+    #exploreResto {
+        min-height: 300px;
+    }
+
+    #locationBlock {
+        width: 100%;
+    }
+
+    #fonctionBlock {
+        min-height: 300px;
+    }
+}
+  
+  @media screen and (min-width: 487px) and (max-width: 1199px)  { /*Ipad*/
+    #logoBlock {
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+    }
+
+    #subTitle2 {
+        font-size: 18px;
+    }
+
+    .rCard {
+        width: 80%;
+    }
+
+    .likeIconMenu {
+        margin-right: 70px;
+    }
+
+    
+    .numberIcon {
+        margin-left: -35px;
+    }
+    
+    #exploreResto {
+        min-height: 300px;
+    }
+
+    #restoBlock {
+        flex-direction: column;
+        min-height: 1050px;
+    }
+
+    #locationBlock {
+        width: 100%;
+    }
+
+    #fonctionBlock {
+        min-height: 300px;
+    }
+  }
+
+  
+  @media screen and (max-width: 486px) { /*smartphone*/
+
+
+    #logoBlock {
+        font-size: 30px;
+    }
+
+    
+    #subTitle2 {
+        font-size: 19px;
+    }
+
+    header {
+        justify-content :center;
+        flex-wrap: wrap;
+        display :flex;
+    }
+
+    #exploreResto {
+        min-height: 300px;
+    }
+
+    #restoBlock {
+        flex-direction: column;
+        min-height: 1050px;
+    }
+
+    .numberIcon {
+        margin-left: -35px;
+    }
+
+
+    .rCard {
+        width: 80%;
+    }
+
+    .likeIconMenu {
+        margin-right: 30px;
+    }
+    
+    #locationBlock {
+        width: 100%;
+    }
+
+    #fonctionBlock {
+        min-height: 300px;
+    }
+
+}
