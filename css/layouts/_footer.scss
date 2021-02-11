@@ -30,6 +30,10 @@
     color: white;
   }
 
+  .fLine:hover, .fLine:active {
+    text-decoration: underline;
+  }
+
   .footBlockLine {
 
       margin-top: 10px;

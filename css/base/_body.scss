@@ -45,8 +45,6 @@
   }
 
 
-
-
 body {
     width: auto;
     margin: auto;
@@ -106,8 +104,6 @@ main {
 }
 
 
-
-
 .rCard {
     margin-top: 15px;
     justify-content: space-between;
@@ -119,61 +115,45 @@ main {
     max-height: 100%;
     color:black;
 
+    
+    &:hover, &:active {
+        animation: cardScale cubic-bezier(0.5, 0, 0.5, 1) 80ms;
+        animation-fill-mode: both;
+    }
+
+    &__newIcon {
+        color: $newFontColor;
+        background-color: $newIconColor;
+        font-weight: bold;
+        padding: 5px;
+        position: absolute;
+        top: 1rem;
+        right: .75rem;
+
+    }
+
+    
+    &__rText {
+        margin-top: -10px;
+        min-height: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__rTextChild {
+        margin-left: 10px;
+        display: flex;
+        max-width: 100%;
+    }
+
+    &__rsubText {
+        margin-left: 10px;
+        margin-top: -20px;
+        max-width: 100%;
+        font-size: 16px;
+    }
 }
 
-.rCard:hover {
-    animation: cardScale cubic-bezier(0.5, 0, 0.5, 1) 80ms;
-    animation-fill-mode: both;
-}
-
-.checkMarkBG {
-    background-color: $checkColor;
-    border-radius: 0px 20px 20px 0px;
-    margin-right: -5px;
-    width: 7%;
-    height: 100%;
-    display: flex;
-    align-self: flex-end;
-    visibility: hidden;
-}
- 
-.menuTextCard:hover > .checkMarkBG {
-    animation-delay: 2s;
-    animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
-    animation-fill-mode: forwards;
-}
-
-  .menuTextCard:hover > .price {
-    animation-delay: 2s;
-    animation: animMoving cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
-    animation-fill-mode: forwards;
-}
-
-
-  .menuTextCard:hover > .checkMarkIcon {
-    animation-delay: 2s;
-    animation: checkMarkHide cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
-    animation-fill-mode: forwards;
-}
-
-.checkMarkIcon {
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-
-.checkMarkRegroup {
-    height: 1.6rem;
-    width: 1.6rem;
-    background-color: #fff;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    border-radius: 100px;
-}
 
 
 
@@ -186,27 +166,6 @@ main {
     object-fit: cover;
   }
 
-  .rText {
-      margin-top: -10px;
-    min-height: 80px;
-      display: flex;
-      flex-direction: column;
-
-  }
-
-  .rTextChild {
-    margin-left: 10px;
-    display: flex;
-    max-width: 100%;
-}
-
-.rsubText {
-
-    margin-left: 10px;
-    margin-top: -20px;
-    max-width: 100%;
-    font-size: 16px;
-}
 
 .logoMenuBlock {
     font-family: 'Shrikhand';
@@ -282,18 +241,61 @@ main {
     display: flex;
     background-color: white;
     border-radius: 20px;
-
     box-shadow: 0 0 16px #0000002e;
     height: 65px;
     width: 88%;
     color:black;
     cursor: pointer; 
+    display: flex;
+    justify-content: space-between;
+
+    &__checkMarkRegroup {
+        visibility: hidden;
+        background-color: $newIconColor;
+        border-radius: 0px 20px 20px 0px;
+        width: 64px;
+        transition-duration: 1.5s; 
+        align-items: center;
+        justify-content: center;
+        display:flex;
+
+
+    }
+
+    &:hover &__checkMarkRegroup  {
+        animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+        animation-fill-mode: forwards;
+      }
+
+
+
+      &__checkMarkBG {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius: 100px;
+        transform: rotate(180deg);
+        transition-duration: 0.5s;
+      }
+
+      
+  &:hover &__checkMarkIcon {
+
+    animation: checkMarkHideAnim cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+    animation-fill-mode: forwards;
+  }
+
+  &__checkMarkIcon {
+    color: $newIconColor;
+  }
+
+
 }
 
-.menuTextRegroup {
-    flex: 1;
 
-}
   .menuText {
     margin-top: 10px;
     margin-left: 10px;
@@ -308,11 +310,14 @@ main {
 }
 
 .price {
-    margin-top: -15px;
+  
+    height: 100%;
+    margin-top: -5px;
     margin-right: 15px;
     font-size: 15px;
     font-weight: bold;
-    align-self: flex-end;
+    display: flex;
+     align-self: flex-end;
 }
 
 
@@ -329,7 +334,7 @@ main {
     align-self: flex-start;
     margin-top: 30px;
     border-bottom: solid;
-    border-color: $animationColor;
+    border-color: $newIconColor;
 }
 
 
@@ -408,6 +413,20 @@ main {
         margin-right: 70px;
     }
 
+    .menuTextCard {
+        &:active &__checkMarkRegroup {
+            animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+            animation-fill-mode: forwards;
+          }
+
+            &:hover &__checkMarkIcon {
+
+    animation: checkMarkHideAnim cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+    animation-fill-mode: forwards;
+  }
+
+    }
+
     
     .numberIcon {
         margin-left: -35px;
@@ -461,6 +480,13 @@ main {
 
     .numberIcon {
         margin-left: -35px;
+    }
+
+    .menuTextCard {
+        &:active &__checkMarkRegroup {
+            animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
+            animation-fill-mode: forwards;
+          }
     }
 
 

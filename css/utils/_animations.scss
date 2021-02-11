@@ -33,8 +33,6 @@
     }
   }
 
-
-
   @keyframes cardScale {
     0% {
         visibility: visible;
@@ -72,12 +70,14 @@
   
 @keyframes checkMarkBGAnim {
     0% {
-        visibility: visible;
+  
         width: 0px;
     }
 
+
+
     100% {
-        width:calc(5%);
+        width: 100px;
         visibility: visible;
     }
   }
@@ -93,25 +93,23 @@
     }
   }
 
-  @keyframes checkMarkHide {
+  @keyframes checkMarkHideAnim {
     0% {
-        visibility: visible;
+      visibility: visible;
     }
 
-    25% {
-        transform: rotate(360deg);
-    }
 
     100% {
-        transform: translateX(-100px);
+      transform: rotate(180deg);
+      visibility: visible;
     }
   }
+
   @keyframes animMoving {
     0% {
       visibility: visible;
     }
     100% {
-      -webkit-transform: translateX(-100px);
-              transform: translateX(-100px);
+         transform: translateX(-100px);
     }
   }

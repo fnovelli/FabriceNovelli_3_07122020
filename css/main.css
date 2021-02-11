@@ -126,22 +126,20 @@
 
 @-webkit-keyframes checkMarkBGAnim {
   0% {
-    visibility: visible;
     width: 0px;
   }
   100% {
-    width: calc(5%);
+    width: 100px;
     visibility: visible;
   }
 }
 
 @keyframes checkMarkBGAnim {
   0% {
-    visibility: visible;
     width: 0px;
   }
   100% {
-    width: calc(5%);
+    width: 100px;
     visibility: visible;
   }
 }
@@ -168,31 +166,25 @@
   }
 }
 
-@-webkit-keyframes checkMarkHide {
+@-webkit-keyframes checkMarkHideAnim {
   0% {
     visibility: visible;
   }
-  25% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
   100% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    visibility: visible;
   }
 }
 
-@keyframes checkMarkHide {
+@keyframes checkMarkHideAnim {
   0% {
     visibility: visible;
   }
-  25% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
   100% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    visibility: visible;
   }
 }
 
@@ -202,7 +194,7 @@
   }
   100% {
     -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
+            transform: translateX(-100px);
   }
 }
 
@@ -212,7 +204,7 @@
   }
   100% {
     -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
+            transform: translateX(-100px);
   }
 }
 
@@ -533,97 +525,24 @@ main {
   color: black;
 }
 
-.rCard:hover {
+.rCard:hover, .rCard:active {
   -webkit-animation: cardScale cubic-bezier(0.5, 0, 0.5, 1) 80ms;
           animation: cardScale cubic-bezier(0.5, 0, 0.5, 1) 80ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
-.checkMarkBG {
-  background-color: #8edec9;
-  border-radius: 0px 20px 20px 0px;
-  margin-right: -5px;
-  width: 7%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  visibility: hidden;
+.rCard__newIcon {
+  color: #008766;
+  background-color: #99e2d0;
+  font-weight: bold;
+  padding: 5px;
+  position: absolute;
+  top: 1rem;
+  right: .75rem;
 }
 
-.menuTextCard:hover > .checkMarkBG {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
-          animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.menuTextCard:hover > .price {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation: animMoving cubic-bezier(0.5, 0, 0.5, 1) 800ms;
-          animation: animMoving cubic-bezier(0.5, 0, 0.5, 1) 800ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.menuTextCard:hover > .checkMarkIcon {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation: checkMarkHide cubic-bezier(0.5, 0, 0.5, 1) 800ms;
-          animation: checkMarkHide cubic-bezier(0.5, 0, 0.5, 1) 800ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.checkMarkIcon {
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.checkMarkRegroup {
-  height: 1.6rem;
-  width: 1.6rem;
-  background-color: #fff;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 100px;
-}
-
-.rImg {
-  border-radius: 20px 20px 0px 0px;
-  max-width: 100%;
-  width: 100%;
-  max-height: 100%;
-  height: 150px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.rText {
+.rCard__rText {
   margin-top: -10px;
   min-height: 80px;
   display: -webkit-box;
@@ -635,7 +554,7 @@ main {
           flex-direction: column;
 }
 
-.rTextChild {
+.rCard__rTextChild {
   margin-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -643,11 +562,21 @@ main {
   max-width: 100%;
 }
 
-.rsubText {
+.rCard__rsubText {
   margin-left: 10px;
   margin-top: -20px;
   max-width: 100%;
   font-size: 16px;
+}
+
+.rImg {
+  border-radius: 20px 20px 0px 0px;
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .logoMenuBlock {
@@ -751,12 +680,66 @@ main {
   width: 88%;
   color: black;
   cursor: pointer;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.menuTextRegroup {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.menuTextCard__checkMarkRegroup {
+  visibility: hidden;
+  background-color: #99e2d0;
+  border-radius: 0px 20px 20px 0px;
+  width: 64px;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menuTextCard:hover .menuTextCard__checkMarkRegroup {
+  -webkit-animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+          animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menuTextCard__checkMarkBG {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.menuTextCard:hover .menuTextCard__checkMarkIcon {
+  -webkit-animation: checkMarkHideAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+          animation: checkMarkHideAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menuTextCard__checkMarkIcon {
+  color: #99e2d0;
 }
 
 .menuText {
@@ -778,10 +761,14 @@ main {
 }
 
 .price {
-  margin-top: -15px;
+  height: 100%;
+  margin-top: -5px;
   margin-right: 15px;
   font-size: 15px;
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
@@ -872,6 +859,18 @@ main {
   .likeIconMenu {
     margin-right: 70px;
   }
+  .menuTextCard:active .menuTextCard__checkMarkRegroup {
+    -webkit-animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+            animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .menuTextCard:hover .menuTextCard__checkMarkIcon {
+    -webkit-animation: checkMarkHideAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+            animation: checkMarkHideAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
   .numberIcon {
     margin-left: -35px;
   }
@@ -923,6 +922,12 @@ main {
   }
   .numberIcon {
     margin-left: -35px;
+  }
+  .menuTextCard:active .menuTextCard__checkMarkRegroup {
+    -webkit-animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+            animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   .rCard {
     width: 80%;
@@ -1018,6 +1023,10 @@ a:link {
 .fLine {
   margin-top: 10px;
   color: white;
+}
+
+.fLine:hover, .fLine:active {
+  text-decoration: underline;
 }
 
 .footBlockLine {
