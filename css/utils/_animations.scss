@@ -70,7 +70,7 @@
   
 @keyframes checkMarkBGAnim {
     0% {
-  
+
         width: 0px;
     }
 
@@ -81,6 +81,20 @@
         visibility: visible;
     }
   }
+
+    
+@keyframes rotateAnim {
+  0% {
+    visibility: visible;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    visibility: visible;
+  }
+}
+
+  
 
   @keyframes menuHide {
     0% {
