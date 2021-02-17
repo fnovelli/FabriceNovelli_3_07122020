@@ -241,7 +241,7 @@
   z-index: 1;
 }
 
-.btnResto:hover::after {
+.btnResto:hover::after, .btnResto:active::after {
   opacity: 1;
 }
 
@@ -329,7 +329,7 @@
   color: black;
 }
 
-.btn:hover {
+.btn:hover, .btn:active {
   -webkit-animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 550ms;
           animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 550ms;
 }
@@ -348,14 +348,12 @@
   cursor: pointer;
 }
 
-.likeIcon:hover {
+.likeIcon:hover, .likeIcon:active {
   background-image: url("../images/icons/heart-fil.svg");
   -webkit-animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 250ms;
           animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 250ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  color: red;
-  fill: red;
 }
 
 .likeIconMenu {
@@ -372,14 +370,12 @@
   cursor: pointer;
 }
 
-.likeIconMenu:hover {
+.likeIconMenu:hover, .likeIconMenu:active {
   background-image: url("../images/icons/heart-fil.svg");
   -webkit-animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 250ms;
           animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 250ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  color: red;
-  fill: red;
 }
 
 .loaderBox {
@@ -449,7 +445,7 @@
 body {
   width: auto;
   margin: auto;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 #logoBlock {
@@ -699,7 +695,7 @@ main {
   border-radius: 20px;
   -webkit-box-shadow: 0 0 16px #0000002e;
           box-shadow: 0 0 16px #0000002e;
-  height: 65px;
+  height: 67px;
   width: 88%;
   color: black;
   cursor: pointer;
@@ -787,12 +783,11 @@ main {
 .menuTextChild {
   margin-top: -15px;
   margin-left: 10px;
-  font-size: 15px;
 }
 
 .price {
-  margin-right: 5px;
-  margin-bottom: 7px;
+  margin-right: 2px;
+  margin-bottom: 12px;
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-size: 15px;
@@ -854,6 +849,9 @@ main {
   .rCard {
     width: 45%;
   }
+  .menuTextChild {
+    font-size: 15px;
+  }
   .likeIconMenu {
     margin-right: 100px;
   }
@@ -901,11 +899,30 @@ main {
             flex-direction: column;
     min-height: 1050px;
   }
+  .menuTextChild {
+    font-size: 15px;
+  }
   #locationBlock {
     width: 100%;
   }
   #fonctionBlock {
     min-height: 300px;
+  }
+  .menuTextCard:active > .menuTextCard__checkMarkRegroup > .menuTextCard__checkMarkBG {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+            animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .menuTextCard:active > .menuTextCard__checkMarkRegroup > .menuTextCard__checkMarkBG > .menuTextCard__checkmarkIconBG {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation: rotateAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+            animation: rotateAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 
@@ -952,11 +969,30 @@ main {
   .likeIconMenu {
     margin-right: 30px;
   }
+  .menuTextChild {
+    font-size: 14px;
+  }
   #locationBlock {
     width: 100%;
   }
   #fonctionBlock {
     min-height: 300px;
+  }
+  .menuTextCard:active > .menuTextCard__checkMarkRegroup > .menuTextCard__checkMarkBG {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+            animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  .menuTextCard:active > .menuTextCard__checkMarkRegroup > .menuTextCard__checkMarkBG > .menuTextCard__checkmarkIconBG {
+    -webkit-animation-delay: 2s;
+            animation-delay: 2s;
+    -webkit-animation: rotateAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+            animation: rotateAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 

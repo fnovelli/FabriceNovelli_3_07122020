@@ -48,7 +48,7 @@
 body {
     width: auto;
     margin: auto;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 #logoBlock {
@@ -243,7 +243,7 @@ main {
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 0 16px #0000002e;
-    height: 65px;
+    height: 67px;
     width: 88%;
     color:black;
     cursor: pointer; 
@@ -314,13 +314,12 @@ main {
 .menuTextChild {
     margin-top: -15px;
     margin-left: 10px;
-    font-size: 15px;
 }
 
 .price {
   
-    margin-right: 5px;
-    margin-bottom: 7px;
+    margin-right: 2px;
+    margin-bottom: 12px;
     align-self: flex-end;
     font-size: 15px;
     font-weight: bold;
@@ -384,6 +383,11 @@ main {
         width: 45%;
     }
     
+
+    .menuTextChild {
+        font-size: 15px;
+    }
+    
     .likeIconMenu {
         margin-right: 100px;
     }
@@ -402,6 +406,7 @@ main {
 }
   
   @media screen and (min-width: 487px) and (max-width: 1199px)  { /*Ipad*/
+
     #logoBlock {
         display: flex;
         justify-content: center;
@@ -435,6 +440,10 @@ main {
         min-height: 1050px;
     }
 
+    .menuTextChild {
+        font-size: 15px;
+    }
+
     #locationBlock {
         width: 100%;
     }
@@ -442,7 +451,24 @@ main {
     #fonctionBlock {
         min-height: 300px;
     }
-  }
+
+    .menuTextCard:active > .menuTextCard__checkMarkRegroup > .menuTextCard__checkMarkBG 
+{
+ 
+   animation-delay: 2s;
+   animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+   animation-fill-mode: forwards;
+}
+
+.menuTextCard:active > .menuTextCard__checkMarkRegroup > .menuTextCard__checkMarkBG > .menuTextCard__checkmarkIconBG
+{
+ 
+   animation-delay: 2s;
+   animation: rotateAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+   animation-fill-mode: both;
+}
+  
+}
 
   
   @media screen and (max-width: 486px) { /*smartphone*/
@@ -491,6 +517,10 @@ main {
     .likeIconMenu {
         margin-right: 30px;
     }
+
+    .menuTextChild {
+        font-size: 14px;
+    }
     
     #locationBlock {
         width: 100%;
@@ -498,6 +528,22 @@ main {
 
     #fonctionBlock {
         min-height: 300px;
+    }
+
+    .menuTextCard:active > .menuTextCard__checkMarkRegroup > .menuTextCard__checkMarkBG 
+    {
+     
+       animation-delay: 2s;
+       animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+       animation-fill-mode: forwards;
+    }
+    
+    .menuTextCard:active > .menuTextCard__checkMarkRegroup > .menuTextCard__checkMarkBG > .menuTextCard__checkmarkIconBG
+    {
+     
+       animation-delay: 2s;
+       animation: rotateAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+       animation-fill-mode: both;
     }
 
 }

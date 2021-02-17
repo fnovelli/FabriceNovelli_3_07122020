@@ -7,7 +7,7 @@
     color: white;
     position: relative;
     z-index: 1;
-    &:hover {
+    &:hover, &:active {
         &::after {
             opacity: 1;
         }
@@ -64,7 +64,6 @@
 .groupBtnIcons {
 
     align-items: center;
-
     display: flex;
 }
 
@@ -82,11 +81,9 @@
     z-index: 1;
 
     color: black;
-    &:hover {
+    &:hover, &:active {
         animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 550ms;
     }
-  
-
 }
 
 .progress {
@@ -103,13 +100,10 @@
     background-image: url('../images/icons/heart.svg');
     cursor: pointer; 
 
-    &:hover {
+    &:hover, &:active {
         background-image: url('../images/icons/heart-fil.svg');
         animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 250ms;
         animation-fill-mode: forwards;
-
-        color: red;
-        fill: red;
     }
 }
 
@@ -125,13 +119,10 @@
     cursor: pointer; 
     
 
-    &:hover {
+    &:hover, &:active {
         background-image: url('../images/icons/heart-fil.svg');
         animation: likeAnim cubic-bezier(0.5, 0, 0.5, 1) 250ms;
         animation-fill-mode: forwards;
-
-        color: red;
-        fill: red;
     }
 }
 
