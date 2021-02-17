@@ -190,7 +190,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
+
     width: 100%;
     min-height: 65px;
     overflow: hidden;
@@ -244,7 +244,6 @@ main {
     border-radius: 20px;
     box-shadow: 0 0 16px #0000002e;
     height: 67px;
-    width: 88%;
     color:black;
     cursor: pointer; 
     display: flex;
@@ -303,25 +302,36 @@ main {
 }
 
 
+.menuTextRegroup {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 
 .menuText {
     margin-top: 10px;
     margin-left: 10px;
-    display: flex;
-    flex-direction: column;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
 }
 
 .menuTextChild {
     margin-top: -15px;
     margin-left: 10px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
+
+
 
 .price {
   
-    margin-right: 2px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     align-self: flex-end;
-    font-size: 15px;
     font-weight: bold;
     display: flex;
 }
@@ -383,6 +393,14 @@ main {
         width: 45%;
     }
     
+    .price {
+        font-size: 15px;
+
+    }
+
+    .menuTextCard {
+        width: 78%;
+    }
 
     .menuTextChild {
         font-size: 15px;
@@ -438,6 +456,16 @@ main {
     #restoBlock {
         flex-direction: column;
         min-height: 1050px;
+    }
+
+    
+    .price {
+        font-size: 15px;
+        margin-right: -11px;
+    }
+
+    .menuTextCard {
+        width: 88%;
     }
 
     .menuTextChild {
@@ -512,6 +540,15 @@ main {
 
     .rCard {
         width: 80%;
+    }
+
+    .menuTextCard {
+        width: 80%;
+    }
+
+    .price {
+        font-size: 14px;
+        margin-right: -11px;
     }
 
     .likeIconMenu {

@@ -633,8 +633,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
   min-height: 65px;
   overflow: hidden;
@@ -696,7 +694,6 @@ main {
   -webkit-box-shadow: 0 0 16px #0000002e;
           box-shadow: 0 0 16px #0000002e;
   height: 67px;
-  width: 88%;
   color: black;
   cursor: pointer;
   display: flex;
@@ -768,29 +765,32 @@ main {
           animation-fill-mode: both;
 }
 
+.menuTextRegroup {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .menuText {
   margin-top: 10px;
   margin-left: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menuTextChild {
   margin-top: -15px;
   margin-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .price {
-  margin-right: 2px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   -ms-flex-item-align: end;
       align-self: flex-end;
-  font-size: 15px;
   font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -849,6 +849,12 @@ main {
   .rCard {
     width: 45%;
   }
+  .price {
+    font-size: 15px;
+  }
+  .menuTextCard {
+    width: 78%;
+  }
   .menuTextChild {
     font-size: 15px;
   }
@@ -898,6 +904,13 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
     min-height: 1050px;
+  }
+  .price {
+    font-size: 15px;
+    margin-right: -11px;
+  }
+  .menuTextCard {
+    width: 88%;
   }
   .menuTextChild {
     font-size: 15px;
@@ -965,6 +978,13 @@ main {
   }
   .rCard {
     width: 80%;
+  }
+  .menuTextCard {
+    width: 80%;
+  }
+  .price {
+    font-size: 14px;
+    margin-right: -11px;
   }
   .likeIconMenu {
     margin-right: 30px;
