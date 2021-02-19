@@ -128,7 +128,11 @@
   0% {
     width: 0px;
   }
+  50% {
+    opacity: 1;
+  }
   100% {
+    opacity: 1;
     width: 100px;
     visibility: visible;
   }
@@ -138,7 +142,11 @@
   0% {
     width: 0px;
   }
+  50% {
+    opacity: 1;
+  }
   100% {
+    opacity: 1;
     width: 100px;
     visibility: visible;
   }
@@ -707,6 +715,7 @@ main {
   border-radius: 0px 20px 20px 0px;
   -webkit-transition-duration: 1.5s;
           transition-duration: 1.5s;
+  opacity: 0;
   visibility: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -792,6 +801,7 @@ main {
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-weight: bold;
+  margin-right: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -969,12 +979,6 @@ main {
   }
   .numberIcon {
     margin-left: -35px;
-  }
-  .menuTextCard:active .menuTextCard__checkMarkRegroup {
-    -webkit-animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
-            animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
   }
   .rCard {
     width: 80%;

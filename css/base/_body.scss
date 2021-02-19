@@ -253,7 +253,7 @@ main {
         background-color: $newIconColor;
         border-radius: 0px 20px 20px 0px;
         transition-duration: 1.5s;
-   
+        opacity: 0;
         visibility: hidden;
         align-items: center;
         justify-content: center;
@@ -333,6 +333,7 @@ main {
     margin-bottom: 15px;
     align-self: flex-end;
     font-weight: bold;
+    margin-right: 5px;
     display: flex;
 }
 
@@ -492,7 +493,7 @@ main {
     {
  
      animation-delay: 2s;
-    animation: rotateAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
+     animation: rotateAnim cubic-bezier(0.5, 0, 0.5, 1) 800ms;
      animation-fill-mode: both;
     }
   
@@ -530,12 +531,7 @@ main {
         margin-left: -35px;
     }
 
-    .menuTextCard {
-        &:active &__checkMarkRegroup {
-            animation: checkMarkBGAnim cubic-bezier(0.5, 0, 0.5, 1) $moving-delay;
-            animation-fill-mode: forwards;
-          }
-    }
+
 
 
     .rCard {
