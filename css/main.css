@@ -907,7 +907,7 @@ main {
   }
   .price {
     font-size: 15px;
-    margin-right: -11px;
+    margin-right: 11px;
   }
   .menuTextCard {
     width: 88%;
@@ -984,7 +984,6 @@ main {
   }
   .price {
     font-size: 14px;
-    margin-right: -11px;
   }
   .likeIconMenu {
     margin-right: 30px;
